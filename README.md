@@ -24,3 +24,4 @@ In a shop there are products which have a discount while others are on promotion
 1. if an item has a discount, calculate how much a customer will pay for the item at the till.
 2. calculate the difference in price (or total amount of money) this customer would have paid if he/she had no discound and when he has the discounts.
 3. each and every item which is on promotion attracts an additional 10% descount. calculate how much discount will be applied to the basket.
+4. Creae a beautiful UI for the application
