@@ -1,0 +1,99 @@
+.red {
+    /* color: red; */
+    border: 1px solid red ;
+    padding: .5rem;
+    margin: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.normal {
+    border: 1px solid blue;
+    margin: .5rem;
+    padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+}
+
+#discountlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+}
+
+.discount{
+    border: 1px solid aqua;
+    margin-top: 5rem;
+    margin: .5rem;
+    padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#totaldiscount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+}
+
+.totaldsc{
+    border: 1px solid magenta;
+    margin-top: 5rem;
+    margin: .5rem;
+    padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+#nondiscount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+}
+.non-dsc{
+    border: 1px solid darkorange;
+    margin-top: 5rem;
+    margin: .5rem;
+    padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#promo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+}
+
+.plusdiscount{
+    border: 1px solid lawngreen;
+    margin-top: 5rem;
+    margin: .5rem;
+    padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#plusdsc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+}
+
+.total-dsc{
+    border: 1px solid dimgrey;
+    margin-top: 5rem;
+    margin: .5rem;
+    padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
