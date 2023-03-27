@@ -3,11 +3,15 @@
     border: 1px solid red ;
     padding: .5rem;
     margin: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 .normal {
     border: 1px solid blue;
     margin: .5rem;
     padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 #list {
     display: flex;
@@ -28,6 +32,8 @@
     margin-top: 5rem;
     margin: .5rem;
     padding: .4rem;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 #totaldiscount {

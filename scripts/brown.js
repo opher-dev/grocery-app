@@ -82,7 +82,7 @@ Basket.map((Item)=> {
     </div>`;
 }); 
 
-/*===================================================================*/
+/*==============================Discount Items=====================================*/
 
 const basketDiv2 = document.getElementById("discountlist");
 
@@ -92,17 +92,17 @@ Basket.map((Item) => {
 
   basketDiv2.innerHTML += `<div class='discount'>
   <p>${Item.Item}</p>
-  <p>${Item.Price}</p>
+  <p> R ${Item.Price}</p>
   <p>Discount: ${Item.Price * Item.discount/100}</p>
-  <p>Total: ${Item.Price - Item.Price * Item.discount/100}</p>
+  <p>Total: R ${Item.Price - Item.Price * Item.discount/100}</p>
   </div>`
 
 });
 
-/*===================================================================*/
+/*=============================Payment without discount======================================*/
 
 
-const basketDiv3 = document.getElementById("totaldiscount");
+const basketDiv3 = document.getElementById("nondiscount");
 
 const shoping = Basket.reduce((pricediscount, totalprice)=>{
 
@@ -111,30 +111,32 @@ const shoping = Basket.reduce((pricediscount, totalprice)=>{
   pricediscount += totalprice.Price;
 
   basketDiv3.innerHTML = `<div class="totaldsc">
-  <p>Total Non-dsc Price: ${pricediscount}</p>
+  <p>Total Non-dsc Price: R ${pricediscount}</p>
   </div>`
 
   return pricediscount
 },0);
 
-/*===================================================================*/
+/*=========================Payment with discount==========================================*/
 
-const basketDiv4 = document.getElementById("nondiscount");
+const basketDiv4 = document.getElementById("totaldiscount");
 
-const shoping2 = Basket.reduce((pricenodsc, totalprice)=>{
+const shoping2 = Basket.reduce((pricedsc, totalprice)=>{
+
+  const discount = totalprice.Price - totalprice.Price * totalprice.discount/100;
 
   totalprice.discount == 0? totalprice.Item:
 
-  pricenodsc += totalprice.Price * totalprice.discount/100;
+  pricedsc += discount;
 
   basketDiv4.innerHTML = `<div class="non-dsc">
-  <p>Total Discount Price: ${pricenodsc}</p>
+  <p>Total Discount Price: R ${parseFloat(pricedsc.toFixed(2))}</p>
   </div>`
 
-  return pricenodsc
+  return pricedsc
 },0);
 
-/*===================================================================*/
+/*=============================Items with promo ======================================*/
 
 const basketDiv5 = document.getElementById("promo");
 
@@ -144,14 +146,14 @@ Basket.map((Item) => {
 
   basketDiv5.innerHTML += `<div class='plusdiscount'>
   <p>${Item.Item}</p>
-  <p>${Item.Price}</p>
-  <p>Plus discount: ${Item.discount + 10}</p>
+  <p>R ${Item.Price}</p>
+  <p>Plus discount: ${Item.discount + 10}%</p>
   <p>${Item.Promo}</p>
   </div>`
 
 });
 
-/*===================================================================*/
+/*=============================Discount Promo ======================================*/
 
 const basketDiv6 = document.getElementById("plusdsc");
 
@@ -162,9 +164,8 @@ const shoping3 = Basket.reduce((totaldsc, totalprice)=>{
   totaldsc += totalprice.discount + 10;
 
   basketDiv6.innerHTML = `<div class="total-dsc">
-  <p>Total dsc Price: ${totaldsc}</p>
+  <p>Total dsc Pecent: ${totaldsc}%</p>
   </div>`
 
   return totaldsc
 },0);
-console.log(shoping3);
